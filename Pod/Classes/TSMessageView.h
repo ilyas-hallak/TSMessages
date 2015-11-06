@@ -17,10 +17,13 @@
 @interface TSMessageView : UIView
 
 /** The displayed title of this message */
-@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readwrite) NSString *title;
+
+@property (nonatomic, readwrite) UILabel *titleLabel;
+
 
 /** The displayed subtitle of this message */
-@property (nonatomic, readonly) NSString *subtitle;
+@property (nonatomic, readwrite) NSString *subtitle;
 
 /** The view controller this message is displayed in */
 @property (nonatomic, readonly) UIViewController *viewController;
@@ -33,18 +36,6 @@
 
 /** Is the message currenlty fully displayed? Is set as soon as the message is really fully visible */
 @property (nonatomic, assign) BOOL messageIsFullyDisplayed;
-
-/** Customize title font using Apperance */
-@property (nonatomic,strong) UIFont *titleFont UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIColor *titleTextColor UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIFont *contentFont UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIColor *contentTextColor UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIImage *messageIcon UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIImage *errorIcon UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIImage *successIcon UI_APPEARANCE_SELECTOR;
-@property (nonatomic,strong) UIImage *warningIcon UI_APPEARANCE_SELECTOR;
-
-
 
 /** Inits the notification view. Do not call this from outside this library.
  @param title The title of the notification view
