@@ -7,13 +7,15 @@
 //
 
 #import "TSMessageView.h"
-#import "HexColor.h"
+
 #import "TSBlurView.h"
 #import "TSMessage.h"
 
 #define TSMessageViewMinimumPadding 15.0
 
 #define TSDesignFileName @"TSMessagesDefaultDesign"
+
+@import HexColors;
 
 static NSMutableDictionary *_notificationDesign;
 
