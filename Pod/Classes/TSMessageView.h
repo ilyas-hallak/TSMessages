@@ -37,6 +37,7 @@
 /** Is the message currenlty fully displayed? Is set as soon as the message is really fully visible */
 @property (nonatomic, assign) BOOL messageIsFullyDisplayed;
 
+@property (nonatomic, strong) UIImageView *iconImageView;
 /** Inits the notification view. Do not call this from outside this library.
  @param title The title of the notification view
  @param subtitle The subtitle of the notification view (optional)
